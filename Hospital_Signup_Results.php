@@ -1,5 +1,7 @@
 <?php
-
+//web oaqTB%6aQDcL6WiSHi(x
+//online db password:- zIZVI4&Xb-Xn7hE8
+//online dbuser:- id15587736_shahraj
 session_start();
 
 if (isset($_REQUEST['submit_hospital_signup'])) {

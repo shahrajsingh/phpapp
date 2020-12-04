@@ -27,11 +27,8 @@ if ($_SESSION['userrole'] === "HOSPITAL") {
 
 <?php
 if ($stmt = mysqli_prepare($link, $query)) {
-  /* execute statement */
   mysqli_stmt_execute($stmt);
-  /* bind result variables */
   mysqli_stmt_bind_result($stmt, $id, $blood_group, $hospital_name, $units_available);
-  /* fetch values */
 ?>
 
 
@@ -42,7 +39,7 @@ if ($stmt = mysqli_prepare($link, $query)) {
   <?php
   }
   ?>
-  <p class="h2">Available Samples</p>
+  <p class="h2" style="margin-left:1rem;">Available Samples</p>
   <form>
     <table class="table table-striped table-dark">
       <thead>
