@@ -6,7 +6,7 @@ session_start();
 
 if (isset($_REQUEST['submit_hospital_signup'])) {
 
-  $conn = mysqli_connect('localhost', 'root', '') or die("unable to connect to a database!");
+  $conn = mysqli_connect('localhost', 'id15587736_shahraj', 'zIZVI4&Xb-Xn7hE8') or die("unable to connect to a database!");
   //mysql_select_db('bloodbank_database') or die(mysql_error());
   mysqli_select_db($conn, "id15587736_bloodbank_database");
   $hospital_email     = $_POST["hospital_email"];

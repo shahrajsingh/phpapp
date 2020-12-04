@@ -22,7 +22,7 @@ if ($_SESSION['userrole'] === "HOSPITAL") {
 ?>
 
 <?php include 'header_file.php'; ?>
-<?php include 'Custom_Menu_File.php'; ?>
+<?php include 'Custom_Menu_file.php'; ?>
 <?php include 'sidebar_file.php';  ?>
 
 <?php

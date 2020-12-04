@@ -5,7 +5,7 @@
 session_start();
 
 if (isset($_REQUEST['submit_receiver_signup'])) {
-  $conn = mysqli_connect('localhost', 'root', '') or die(mysqli_connect_error());
+  $conn = mysqli_connect('localhost', 'id15587736_shahraj', 'zIZVI4&Xb-Xn7hE8') or die(mysqli_connect_error());
   mysqli_select_db($conn, 'id15587736_bloodbank_database') or die("error has occurred at 7");
 
   $Receiver_Email         = $_POST["Receiver_Email"];
