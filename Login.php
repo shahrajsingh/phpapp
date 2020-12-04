@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 if (isset($_REQUEST['login_submit'])) 
  {
@@ -70,4 +71,3 @@ else
   	#echo "form not submitted error!!";
   	header("refresh:2,url=index.php");
  }
-?>

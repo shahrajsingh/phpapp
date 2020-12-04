@@ -37,6 +37,7 @@ $query1 = "SELECT req.request_id,req.user_email,sample.blood_group
 			</thead>
 			<tbody>
 				<?php
+				$i = 1;
 				while (mysqli_stmt_fetch($stmt1)) {
 				?>
 
@@ -47,9 +48,19 @@ $query1 = "SELECT req.request_id,req.user_email,sample.blood_group
 					</tr>
 
 				<?php
+					$i++;
 				}
 				?>
+				<?php
+				if ($i == 1) {
+				?>
+					<td colspan="4" style="text-align:center">
+						<p class="h6">No Request</p>
+					</td>
+				<?php
 
+				}
+				?>
 			</tbody>
 		</table>
 </div>

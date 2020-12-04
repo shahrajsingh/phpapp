@@ -35,8 +35,9 @@
                 document.getElementById("sidebar-nav").style.visibility = "hidden";
             } else {
                 document.getElementById('overlay').style.display = "none";
-                document.getElementById("sidebar").style.position = "unset";
+
                 document.getElementById("sidebar").style.width = "64px";
+                document.getElementById("sidebar").style.position = "unset";
                 document.getElementById("sidebar-nav").style.visibility = "hidden";
             }
 
