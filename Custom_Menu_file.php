@@ -1,38 +1,46 @@
  <?php
 
-           if($_SESSION['userrole']==" ")
-           {
- ?>
-                <li class="selected"><a href="index.php">Home</a></li>
-                <li class="selected"><a href="Hospital_Signup.php">Hospital Signup</a></li>
-                <li class="selected"><a href="Receiver_Signup.php">Receiver Signup</a></li>
-          <?php 
-           }
-           
-           if($_SESSION['userrole']=="HOSPITAL")
-           {
-          ?>
-               <li class="selected"><?php echo "<a href='index.php'> Hi ".$_SESSION['useremail']." !"; ?> </a></li>
-               <li class="selected"><a href="Logout.php">Logout</a></li>
-           <?php
-          }
-          if($_SESSION['userrole']=="RECEIVER")
-           {
-          ?>
-               <li class="selected"><?php echo "<a href='index.php'> Hi ".$_SESSION['useremail']." !"; ?> </a></li>
-               <li class="selected"><a href="Logout.php">Logout</a></li>
-           <?php
-          }
-          ?>
-        </ul>
-      </div>
-    </div>
-    <div id="content_header"></div>
-    <div id="site_content">
-      <div id="banner"></div>
-    <div id="sidebar_container">
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-          <ul>
-            <li><a href="Available_Sample.php">Available Sample</a></li>  
+  if ($_SESSION['userrole'] == " ") {
+  ?>
+
+   <li class="nav-item active"><a class="nav-link" href="index.php">
+       <p class="h5">Home</p>
+     </a></li>
+   <li class="nav-item"><a class="nav-link" href="Hospital_Signup.php">
+       <p class="h5">Hospital Signup</p>
+     </a></li>
+   <li class="nav-item"><a class="nav-link" href="Receiver_Signup.php">
+       <p class="h5">Receiver Signup</p>
+     </a></li>
+ <?php
+  }
+  //i was here
+  if ($_SESSION['userrole'] == "HOSPITAL") {
+  ?>
+   <li class="nav-item active"><?php echo "<a class='nav-link h5'> Hi " . $_SESSION['useremail'] . " !"; ?> </a></li>
+   <li class="nav-item"><a class="nav-link" href="Logout.php">
+       <p class="h5">Logout</p>
+     </a></li>
+ <?php
+  }
+  if ($_SESSION['userrole'] == "RECEIVER") {
+  ?>
+   <li class="nav-item active"><?php echo "<a class='nav-link h5' > Hi " . $_SESSION['useremail'] . " !"; ?> </a></li>
+   <li class="nav-item"><a class="nav-link" href="Logout.php">
+       <p class="h5">Logout</p>
+     </a></li>
+ <?php
+  }
+  ?>
+ </ul>
+ </div>
+ </nav>
+ <!--<div id="content_header"></div>-->
+ <div class="container-fluid">
+   <div class="row">
+     <div class="sidebar" id="sidebar">
+       <!--<div id="banner"></div>-->
+       <button class="btn btn-outline-dark menu-btn" onclick="toggleSidebar()">
+         <i class="material-icons">menu</i></button>
+       <ul class="navbar-nav mr-auto" id="sidebar-nav">
+         <li class="nav-item"><a class="nav-link h5" href="Available_Sample.php">Available Sample</a></li>
